@@ -3,9 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { ReusableComponentsModule } from '@monorepos/reusable-components';
+
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule, ReusableComponentsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

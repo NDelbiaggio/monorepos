@@ -1,10 +1,25 @@
 # Monorepos
+This purpose of this project is to play with monorepos and Nx. This monorepo contains the following:
 
-This project was generated using [Nx](https://nx.dev).
+* monorepos [app]
+* reusable-components, angular library with storybook stories [lib]
+* ui (design system) [lib]
+* monorepos-e2e [e2e cypress tests]
+* reusable-components-e2e [e2e cypress tests runnable over storybook]
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+## Work that has been done
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+### Installation process
+
+* create the repo `npx create-nx-workspace monoreposeApp  --preset=angular`
+* create lib `npx ng generate lib reusableComponents`
+* install storybook for nrwl `npm i -D @nrwl/storybook`
+* create storybook config `ng generate storybook-configuration reusable-components`
+
+### Start storybook
+```bash
+ng run reusable-components:storybook
+```
 
 ## Quick Start & Documentation
 
@@ -35,7 +50,6 @@ Below are our core plugins:
 - [Node](https://nodejs.org)
   - `ng add @nrwl/node`
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
 
 ## Generate an application
 
@@ -81,18 +95,6 @@ Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
 Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
-## Further help
 
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 
-## ☁ Nx Cloud
 
-### Computation Memoization in the Cloud
-
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.

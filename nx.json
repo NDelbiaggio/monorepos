@@ -1,8 +1,4 @@
 {
-  "npmScope": "monorepos",
-  "affected": {
-    "defaultBase": "master"
-  },
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": {
@@ -14,11 +10,21 @@
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "monorepos",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
       }
     }
   },
@@ -29,6 +35,16 @@
     "monorepos-e2e": {
       "tags": [],
       "implicitDependencies": ["monorepos"]
+    },
+    "reusable-components": {
+      "tags": []
+    },
+    "reusable-components-e2e": {
+      "tags": [],
+      "implicitDependencies": ["reusable-components"]
+    },
+    "ui": {
+      "tags": []
     }
   }
 }
