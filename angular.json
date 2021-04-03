@@ -72,11 +72,14 @@
               "apps/monorepos/src/favicon.ico",
               "apps/monorepos/src/assets"
             ],
-            "styles": ["apps/monorepos/src/styles.scss"],
+            "styles": [
+              "apps/monorepos/src/styles.scss"
+            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/ui/src/lib/styles"]
+              "includePaths": [
+                "libs/ui/src/lib/styles"
+              ]
             },
-            "extractCss": true,
             "scripts": []
           },
           "configurations": {
@@ -90,7 +93,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -108,7 +110,10 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -135,7 +140,10 @@
               "apps/monorepos/tsconfig.spec.json",
               "apps/monorepos/tsconfig.editor.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/monorepos/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/monorepos/**/*"
+            ]
           }
         },
         "test": {
@@ -143,7 +151,10 @@
           "options": {
             "jestConfig": "apps/monorepos/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/apps/monorepos"
+          ]
         }
       }
     },
@@ -168,8 +179,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/monorepos-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/monorepos-e2e/**/*"]
+            "tsConfig": [
+              "apps/monorepos-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/monorepos-e2e/**/*"
+            ]
           }
         }
       }
@@ -187,7 +203,10 @@
               "libs/reusable-components/tsconfig.lib.json",
               "libs/reusable-components/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/reusable-components/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/reusable-components/**/*"
+            ]
           }
         },
         "test": {
@@ -195,7 +214,10 @@
           "options": {
             "jestConfig": "libs/reusable-components/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/reusable-components"
+          ]
         },
         "storybook": {
           "builder": "@nrwl/storybook:storybook",
@@ -214,7 +236,9 @@
         },
         "build-storybook": {
           "builder": "@nrwl/storybook:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "uiFramework": "@storybook/angular",
             "outputPath": "dist/storybook/reusable-components",
@@ -256,7 +280,9 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/reusable-components-e2e/tsconfig.e2e.json"],
+            "tsConfig": [
+              "apps/reusable-components-e2e/tsconfig.e2e.json"
+            ],
             "exclude": [
               "**/node_modules/**",
               "!apps/reusable-components-e2e/**/*"
@@ -278,7 +304,10 @@
               "libs/ui/tsconfig.lib.json",
               "libs/ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ui/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui/**/*"
+            ]
           }
         },
         "test": {
@@ -286,7 +315,10 @@
           "options": {
             "jestConfig": "libs/ui/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui"
+          ]
         }
       },
       "schematics": {
