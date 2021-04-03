@@ -1,2 +1,6 @@
 <h2>Monorepo application</h2>
 <monorepos-header></monorepos-header>
+
+<ul *ngIf="technology$ | async as technologies">
+  <li *ngFor="let technology of technologies">{{ technology }}</li>
+</ul>

@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { TechnologyService } from './technology.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'monorepos';
+
+  technology$: Observable<any[]>;
+
+  constructor(public technologyService: TechnologyService) {
+    this.technology$ = this.technologyService.getTechnologies();
+  }
 }
