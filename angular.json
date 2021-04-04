@@ -229,6 +229,16 @@
               "quiet": true
             }
           }
+        },
+        "compodoc": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "npx compodoc -p libs/reusable-components/tsconfig.lib.json -e json -d libs/reusable-components/"
+              }
+            ]
+          }
         }
       },
       "schematics": {

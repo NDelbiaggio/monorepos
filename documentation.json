@@ -1,0 +1,121 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-873f45185c13131903a4a0f27695586c",
+            "file": "libs/reusable-components/src/lib/header/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "monorepos-header",
+            "styleUrls": [
+                "./header.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./header.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'monorepos-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.scss']\n})\nexport class HeaderComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import 'colors';\n\n.container {\n  display: flex;\n  width: 100%;\n\n  ul {\n    display: flex;\n    width: 80%;\n    align-items: center;\n    padding: 20px;\n    background-color: #1e81b0;\n    color: white;\n    li {\n      list-style-type: none;\n      margin: 0 20px;\n\n      color: $secondary;\n\n      &.search {\n        flex-grow: 2;\n        & > input {\n          width: 100%;\n          height: 20px;\n        }\n      }\n    }\n  }\n}\n\n@media all and (max-width: 600px) {\n  ul {\n    flex-wrap: wrap;\n\n    & > li {\n      flex-basis: 50%;\n    }\n  }\n}\n\n@media all and (max-width: 400px) {\n  ul > li {\n    flex-basis: 100%;\n  }\n  .search {\n    order: 1;\n  }\n}\n",
+                    "styleUrl": "./header.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<nav class=\"container\">\n  <ul>\n    <li>Home</li>\n    <li>MyAccount</li>\n    <li class=\"search\">\n      <input type=\"text\" class=\"search-input\" placeholder=\"Search\" />\n    </li>\n  </ul>\n</nav>\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "ReusableComponentsModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "HeaderComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "HeaderComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": [],
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "libs/reusable-components/src/lib/header/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            }
+        ]
+    }
+}

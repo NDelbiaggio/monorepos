@@ -9,7 +9,7 @@ This purpose of this project is to play with monorepos and Nx. This monorepo con
 
 ## Work that has been done
 
-### Installation process
+### Installation process
 
 * create the repo `npx create-nx-workspace monoreposeApp  --preset=angular`
 * create lib `npx ng generate lib reusableComponents`

@@ -3,7 +3,12 @@
     <li>Home</li>
     <li>MyAccount</li>
     <li class="search">
-      <input type="text" class="search-input" placeholder="Search" />
+      <input
+        type="text"
+        class="search-input"
+        [placeholder]="searchPlaceHolder"
+      />
     </li>
+    <button *ngIf="displayButton">Search</button>
   </ul>
 </nav>
