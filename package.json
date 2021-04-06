@@ -49,6 +49,7 @@
     "zone.js": "^0.10.2"
   },
   "devDependencies": {
+    "@angular-devkit/architect": "^0.1102.7",
     "@angular-devkit/build-angular": "0.1102.7",
     "@angular-devkit/schematics": "^11.2.7",
     "@angular/cli": "11.2.7",
@@ -59,7 +60,9 @@
     "@nestjs/testing": "^7.0.0",
     "@nrwl/cli": "^11.6.1",
     "@nrwl/cypress": "11.6.1",
+    "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining": "^7.13.12",
     "@nrwl/jest": "11.6.1",
+    "@nrwl/linter": "11.6.1",
     "@nrwl/nest": "^11.6.1",
     "@nrwl/node": "11.6.1",
     "@nrwl/storybook": "11.6.1",
