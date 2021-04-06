@@ -7,7 +7,7 @@
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": { "defaultBase": "master" },
+  "affected": { "defaultBase": "main" },
   "npmScope": "monorepos",
   "tasksRunnerOptions": {
     "default": {
@@ -24,7 +24,7 @@
     }
   },
   "projects": {
-    "monorepos": { "tags": [] },
+    "monorepos": { "tags": [], "implicitDependencies": ["ui"] },
     "monorepos-e2e": { "tags": [], "implicitDependencies": ["monorepos"] },
     "reusable-components": { "tags": [] },
     "reusable-components-e2e": {
